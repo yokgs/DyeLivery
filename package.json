@@ -1,0 +1,22 @@
+{
+  "name": "@yokgs/dyelivery",
+  "version": "1.0.0-pre",
+  "description": "Dyelivery is a command-line tool and Node.js package that helps you manage DyeScript projects efficiently. It provides functionalities to streamline your workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yokgs/DyeLivery.git"
+  },
+  "keywords": [
+    "dyescript"
+  ],
+  "author": "Yazid Slila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yokgs/DyeLivery/issues"
+  },
+  "homepage": "https://github.com/yokgs/DyeLivery#readme"
+}

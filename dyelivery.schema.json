@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Dyelivery Configuration Schema",
+    "description": "This schema defines the valid structure of a dyelivery.json configuration file",
+    "type": "object",
+    "required": ["entry", "outputDir", "targets"],
+    "properties": {
+      "entry": {
+        "type": "string",
+        "description": "The path to the directory containing source files."
+      },
+      "experimental": {
+        "type": "boolean",
+        "description": "Enables experimental features (optional)."
+      },
+      "log": {
+        "oneOf": [
+          {
+            "type": "boolean",
+            "description": "Disable logging (set to false)."
+          },
+          {
+            "type": "string",
+            "description": "The path to the directory for logs."
+          }
+        ],
+        "description": "Configures logging behavior. Can be disabled (false) or specify a log directory path (string)."
+      },
+      "outputDir": {
+        "type": "string",
+        "description": "The path to the directory for generated output files."
+      },
+      "targets": {
+        "type": "array",
+        "description": "An array of target output formats (e.g., CSS, MinCSS).",
+        "items": {
+          "type": "string",
+          "enum": ["CSS", "MinCSS", "DyeGest"]
+        }
+      },
+      "strict": {
+        "type": "boolean",
+        "description": "Enables strict mode with additional validation (optional)."
+      },
+      "logLevel": {
+        "type": "string",
+        "description": "The minimum severity level for logging messages (optional).",
+        "enum": ["trace", "debug", "info", "warn", "error"]
+      }
+    }
+  }
+  
